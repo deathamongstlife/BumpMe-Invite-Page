@@ -12,6 +12,7 @@
       color: #f0f0f0;
       font-family: 'Roboto', sans-serif;
       overflow-x: hidden;
+      cursor: none;
     }
 
     header {
@@ -98,6 +99,38 @@
       border-top: 2px solid red;
       text-align: center;
     }
+
+    /* Cursor trail effect */
+    .custom-cursor, .cursor-trail {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .custom-cursor {
+      background-color: rgba(255, 0, 0, 0.3);
+      border: 2px solid red;
+      box-shadow: 0 0 8px red;
+      transform: translate(-50%, -50%);
+    }
+
+    .cursor-trail {
+      background-color: rgba(255, 0, 0, 0.15);
+      box-shadow: 0 0 6px red;
+      opacity: 0.7;
+      transform: translate(-50%, -50%);
+      animation: fadeTrail 0.6s linear forwards;
+    }
+
+    @keyframes fadeTrail {
+      to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+      }
+    }
   </style>
 </head>
 <body>
@@ -114,7 +147,7 @@
     <div class="features">
       <div class="feature">
         <h3>🔥 Automatic Bumping</h3>
-        <p>Set it and forget it. BumpMe bumps your server at optimal intervals with no manual posting for premium subscribers.</p>
+        <p>Set it and forget it. BumpMe bumps your server at optimal intervals with no manual posting.</p>
       </div>
       <div class="feature">
         <h3>📝 Personalized Messages</h3>
@@ -141,8 +174,34 @@
   </section>
 
   <footer>
-    &copy; 2024 BumpMe — Built for Discord server growth.
+    &copy; 2025 BumpMe — Built for Discord server growth.
   </footer>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+
+  <script>
+    const cursor = document.getElementById('cursor');
+
+    document.addEventListener('mousemove', e => {
+      const x = e.clientX;
+      const y = e.clientY;
+      cursor.style.left = `${x}px`;
+      cursor.style.top = `${y}px`;
+
+      // Create trail
+      const trail = document.createElement('div');
+      trail.className = 'cursor-trail';
+      trail.style.left = `${x}px`;
+      trail.style.top = `${y}px`;
+      document.body.appendChild(trail);
+
+      // Remove after fade
+      setTimeout(() => {
+        trail.remove();
+      }, 600);
+    });
+  </script>
 
 </body>
 </html>
