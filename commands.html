@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BumpMe Commands</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="custom-cursor" id="cursor"></div>
@@ -21,28 +21,33 @@
     </div>
   </nav>
 
-  <main class="content">
-    <h1>📜 Commands</h1>
+  <header class="hero">
+    <h1>Bot Commands</h1>
+    <p>Master the tools that power your server growth.</p>
+  </header>
 
-    <ul class="commands-list">
-      <li>/setup invite</li>
-      <li>/setup description</li>
-      <li>/setup channel</li>
-      <li>/setup color <span class="premium">[Premium Only]</span></li>
-      <li>/setup banner <span class="premium">[Premium Only]</span></li>
-      <li>/bump</li>
-      <li>/info bot</li>
-      <li>/info server</li>
-      <li>/toggle autobump <span class="premium">[Premium Only]</span></li>
-    </ul>
+  <section class="commands fade-in">
+    <div class="card"><code>/setup invite</code></div>
+    <div class="card"><code>/setup description</code></div>
+    <div class="card"><code>/setup channel</code></div>
+    <div class="card premium"><code>/setup color</code> <span>Premium</span></div>
+    <div class="card premium"><code>/setup banner</code> <span>Premium</span></div>
+    <div class="card"><code>/bump</code></div>
+    <div class="card"><code>/info bot</code></div>
+    <div class="card"><code>/info server</code></div>
+    <div class="card premium"><code>/toggle autobump</code> <span>Premium</span></div>
+  </section>
 
-    <p class="premium-info">
-      To access the premium commands, you can join the support server, open a ticket, and submit payment for it.
-    </p>
-  </main>
+  <section class="premium-note">
+    <div class="card fade-in">
+      <p>
+        To access the premium commands, join the support server and open a ticket to submit payment.
+      </p>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 BumpMe — Elevate your server game.
+    &copy; 2025 BumpMe — The future of server promotion.
   </footer>
 
   <script src="cursor.js"></script>
