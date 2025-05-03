@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BumpMe</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="custom-cursor" id="cursor"></div>
 
-  <nav class="navbar">
+  <nav class="navbar fade-in">
     <div class="nav-container">
       <a href="index.html" class="logo">BumpMe</a>
       <ul class="nav-links">
@@ -21,43 +22,57 @@
     </div>
   </nav>
 
-  <header class="hero">
+  <header class="hero fade-in">
     <h1>BumpMe</h1>
     <p>Next-generation Discord bump bot — sleek, automatic, and always online.</p>
+    <div class="cta">
+      <a href="https://discord.com/oauth2/authorize?client_id=1265343375054340160&scope=bot&permissions=274878262273" target="_blank" class="cta-btn">Invite BumpMe</a>
+      <a href="https://discord.gg/A2ANr4tnTH" target="_blank" class="cta-btn">Join Support</a>
+    </div>
   </header>
 
-  <div class="cta">
-    <a href="https://discord.com/oauth2/authorize?client_id=1265343375054340160&scope=bot&permissions=274878262273" target="_blank">Invite BumpMe</a>
-    <a href="https://discord.gg/A2ANr4tnTH" target="_blank">Join Support</a>
-  </div>
-
-  <section class="features">
+  <section class="features fade-up">
     <div class="feature">
       <h3>🚀 Auto Bumps</h3>
-      <p>Let BumpMe promote your server 24/7 without lifting a finger. Just set it and grow.</p>
+      <p>Promote your server 24/7 without lifting a finger. Set it and grow.</p>
     </div>
     <div class="feature">
       <h3>🧠 Smart Scheduling</h3>
-      <p>Advanced time-based automation for hands-free server visibility.</p>
+      <p>Advanced automation for hands-free server visibility.</p>
     </div>
     <div class="feature">
       <h3>📊 Analytics</h3>
-      <p>Know what works. Track your bump stats and optimize for growth.</p>
+      <p>Track your bump stats and optimize for growth.</p>
     </div>
     <div class="feature">
       <h3>🎨 Custom Messages</h3>
-      <p>Craft the perfect bump message that highlights what makes your community unique.</p>
+      <p>Craft perfect bump messages that highlight your community.</p>
     </div>
     <div class="feature">
       <h3>🤝 Live Support</h3>
-      <p>Need help? Our dedicated team is ready around the clock.</p>
+      <p>Need help? Our team is ready around the clock.</p>
     </div>
   </section>
 
-  <footer>
+  <section class="extras fade-in">
+    <h2>Trusted by Growing Communities</h2>
+    <div class="card-row">
+      <div class="card">
+        <p>“BumpMe helped our server go from quiet to thriving in just a week.”</p>
+        <span>— Scarlet</span>
+      </div>
+      <div class="card">
+        <p>“I love the automation. It’s like having a marketing team built in.”</p>
+        <span>— FrenchToast</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="fade-in">
     &copy; 2025 BumpMe — The future of server promotion.
   </footer>
 
   <script src="cursor.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
